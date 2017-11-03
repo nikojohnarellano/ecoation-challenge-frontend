@@ -1,6 +1,6 @@
 # Ecoation Developer Challenge Front End
 
-## url : http://ecoation-frontend.azurewebsites.net/
+## url : http://ecoation-spa.azurewebsites.net/
 
 ###Libraries used :
 * Reactjs

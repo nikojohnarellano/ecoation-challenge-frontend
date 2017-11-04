@@ -55,6 +55,11 @@ export default class IntegerPanel extends Component {
             return;
         }
 
+        if(this.state.newInt < 0) {
+            this.setState({ integerErrorText : "You must enter a non-negative integer." })
+            return;
+        }
+
         try {
             this.setState({ loading : true })
 
@@ -63,7 +68,7 @@ export default class IntegerPanel extends Component {
             
             this.setState({ loading : false })
             if(data) {
-                this.setState({ displayInt : data.currentInteger })
+                this.setState({ displayInt : data.currentInteger, integerErrorText : "" })
             }
         } catch(e) {
             console.log(e)
